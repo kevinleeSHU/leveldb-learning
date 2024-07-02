@@ -1,0 +1,125 @@
+{
+    "files.associations": {
+        "*.json": "jsonc",
+        "iostream": "cpp",
+        "ostream": "cpp",
+        "*.tcc": "cpp",
+        "iosfwd": "cpp",
+        "compare": "cpp",
+        "istream": "cpp",
+        "vector": "cpp",
+        "deque": "cpp",
+        "array": "cpp",
+        "list": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "string_view": "cpp",
+        "initializer_list": "cpp",
+        "random": "cpp",
+        "atomic": "cpp",
+        "bit": "cpp",
+        "cctype": "cpp",
+        "clocale": "cpp",
+        "cmath": "cpp",
+        "concepts": "cpp",
+        "condition_variable": "cpp",
+        "cstdarg": "cpp",
+        "cstddef": "cpp",
+        "cstdint": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "cstring": "cpp",
+        "ctime": "cpp",
+        "cwchar": "cpp",
+        "cwctype": "cpp",
+        "map": "cpp",
+        "set": "cpp",
+        "exception": "cpp",
+        "algorithm": "cpp",
+        "functional": "cpp",
+        "iterator": "cpp",
+        "memory": "cpp",
+        "memory_resource": "cpp",
+        "numeric": "cpp",
+        "ratio": "cpp",
+        "system_error": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp",
+        "fstream": "cpp",
+        "limits": "cpp",
+        "mutex": "cpp",
+        "new": "cpp",
+        "numbers": "cpp",
+        "semaphore": "cpp",
+        "stdexcept": "cpp",
+        "stop_token": "cpp",
+        "streambuf": "cpp",
+        "thread": "cpp",
+        "cinttypes": "cpp",
+        "typeinfo": "cpp",
+        "chrono": "cpp",
+        "optional": "cpp",
+        "sstream": "cpp",
+        "variant": "cpp",
+        "complex": "cpp",
+        "iomanip": "cpp"
+    },
+    "code-runner.executorMap": {
+        "c": "mkdir -p $workspaceRoot/build/$(basename $dir) && cd $dir && gcc $fileName -o $workspaceRoot/build/$(basename $dir)/$fileNameWithoutExt -fopenmp && $workspaceRoot/build/$(basename $dir)/$fileNameWithoutExt",
+        "cpp": "mkdir -p $workspaceRoot/build && cd $dir && g++ $fileName -o $workspaceRoot/build/$fileNameWithoutExt -std=c++17 -lgtest -pthread -lleveldb && $workspaceRoot/build/$fileNameWithoutExt",
+    },
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.enablePreview": false,
+    "editor.tokenColorCustomizations": {
+        "[*Light*]": {
+            "textMateRules": [
+                {
+                    "scope": "ref.matchtext",
+                    "settings": {
+                        "foreground": "#000"
+                    }
+                }
+            ]
+        },
+        "[*Dark*]": {
+            "textMateRules": [
+                {
+                    "scope": "ref.matchtext",
+                    "settings": {
+                        "foreground": "#fff"
+                    }
+                }
+            ]
+        },
+        "[Visual Studio Dark]": {
+            "keywords": "#C08D6C",
+            "strings": "#6A9955",
+            "functions": "#9CDCFE",
+            "types": "#2b8e4f"
+        },
+        "textMateRules": [
+            {
+                "scope": "googletest.failed",
+                "settings": {
+                    "foreground": "#f00"
+                }
+            },
+            {
+                "scope": "googletest.passed",
+                "settings": {
+                    "foreground": "#0f0"
+                }
+            },
+            {
+                "scope": "googletest.run",
+                "settings": {
+                    "foreground": "#0f0"
+                }
+            }
+        ]
+    },
+    "gtest-adapter.debugConfig": [
+        "C/C++"
+    ]
+}
