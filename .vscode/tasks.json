@@ -57,7 +57,7 @@
             "args": [
                 "-g",
                 "${file}",
-                "-L/home/lyw/downloads/leveldb/build/debug",
+                "-L/usr/local/lib/leveldb/debug",
                 "-o",
                 "build/${relativeFileDirname}/${fileBasenameNoExtension}",
                 "-std=c++17",
