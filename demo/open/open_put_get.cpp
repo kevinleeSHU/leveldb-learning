@@ -9,7 +9,7 @@ int main()
     leveldb::Options options;
     options.create_if_missing = true;
     // options.error_if_exists = true;
-    leveldb::Status status = leveldb::DB::Open(options, "/home/lyw/code/leveldb_study/testdb", &db);
+    leveldb::Status status = leveldb::DB::Open(options, "/home/lyw/Code/leveldb-learning/testdb", &db);
     assert(status.ok());
     std::string key = "apple";
     std::string value = "A";

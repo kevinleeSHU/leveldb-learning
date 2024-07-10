@@ -22,7 +22,16 @@
                 "-std=c++17",
                 "-lgtest",
                 "-pthread",
-                "-lleveldb"
+                "-lleveldb",    
+                "||",
+                "{rm",
+                "-rf",
+                "build/${relativeFileDirname};",
+                "echo",
+                "-e",
+                "'\\e[31mSource file not found!';",
+                "exit",
+                "1;}"
             ],
             "problemMatcher": {
                 "owner": "cpp",
@@ -54,7 +63,16 @@
                 "-std=c++17",
                 "-lgtest",
                 "-pthread",
-                "-lleveldb"
+                "-lleveldb",    
+                "||",
+                "{rm",
+                "-rf",
+                "build/${relativeFileDirname};",
+                "echo",
+                "-e",
+                "'\\e[31mSource file not found!';",
+                "exit",
+                "1;}"
             ],
             "problemMatcher": {
                 "owner": "cpp",
