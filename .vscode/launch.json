@@ -5,7 +5,7 @@
             "name": "Run C/C++",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/build/${fileBasenameNoExtension}",
+            "program": "${fileDirname}/build/${relativeFileDirname}/${fileBasenameNoExtension}",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
