@@ -2,9 +2,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Create Build Directory",
+            "label": "create build dir",
             "type": "shell",
-            "command": "mkdir -p build",
+            "command": "mkdir -p build/${relativeFileDirname}",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
@@ -12,11 +12,10 @@
             }
         },
         {
-            "label": "c++ compile",
+            "label": "c++ run compile",
             "command": "g++",
             "type": "shell",
             "args": [
-                "-g",
                 "${file}",
                 "-o",
                 "${fileDirname}/build/${fileBasenameNoExtension}",
@@ -43,10 +42,51 @@
             "group": "build"
         },
         {
-            "label": "c++ debug build",
+            "label": "c++ debug compile",
+            "command": "g++",
+            "type": "shell",
+            "args": [
+                "-g",
+                "${file}",
+                "-L/home/lyw/downloads/leveldb/build/debug",
+                "-o",
+                "build/${relativeFileDirname}/${fileBasenameNoExtension}",
+                "-std=c++17",
+                "-lgtest",
+                "-pthread",
+                "-lleveldb"
+            ],
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            },
+            "group": "build"
+        },
+        {
+            "label": "c++ debug task",
             "dependsOn": [
-                "Create Build Directory",
-                "c++ compile"
+                "create build dir",
+                "c++ debug compile"
+            ],
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "c++ run task",
+            "dependsOn": [
+                "create build dir",
+                "c++ run compile"
             ],
             "problemMatcher": [],
             "group": "build"
