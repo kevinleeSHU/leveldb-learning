@@ -9,7 +9,7 @@ int main()
     leveldb::Options options;
     options.create_if_missing = true;
     // options.error_if_exists = true;
-    leveldb::Status status = leveldb::DB::Open(options, "/tmp/testdb", &db);
+    leveldb::Status status = leveldb::DB::Open(options, "/home/lyw/code/leveldb_study/testdb", &db);
     assert(status.ok());
     std::string key = "apple";
     std::string value = "A";
@@ -21,6 +21,7 @@ int main()
         std::cout << "读取到的与(key=" << key << ")对应的(value=" << get << ")" << std::endl;
     else
         std::cout << "读取失败!" << std::endl;
+
     delete db;
     return 0;
 }
